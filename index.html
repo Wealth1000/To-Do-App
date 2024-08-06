@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet"/>
+    <title>To Do App</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <a href="">@Wealth</a>
+                <img src="My Father.jpg"id="#profile-img"/>
+            </div>
+            <div class="content">
+                <div class="btn-collections">
+                    <button class="total-btn selected">Total Tasks</button>
+                    <button class="in-progress-btn">In Progress</button>
+                    <button class="completed-btn">Completed</button>
+                </div>
+                <div class="task-content">
+                    <div class="previews-container">
+                        
+                    </div>
+                    <form class="form">
+                        <div class="btn-div">
+                            <button class="close-btn">X</button>
+                        </div>
+                        <div class="form-div title">
+                            <label>Title</label><br>
+                            <input class="input-task-info" required id="title" placeholder="Enter title here"/>
+                        </div>
+                        <div class="form-div date">
+                            <label>Date</label><br>
+                            <input class="input-task-info" required id="date" placeholder="DD/MM/YYYY"type="date"/>
+                        </div>
+                        <div class="form-div location">
+                            <label>Location:</label><br>
+                            <input class="input-task-info" id="location" placeholder="Eg. Accra,Ghana"/>
+                        </div>
+                        <div class="form-div description">
+                            <label>Description</label><br>
+                            <textarea class="description-input" id="description" cols="30"rows="5"></textarea>
+                        </div>
+                        <div class="add-task-form-div">
+                            <button class="add-form-btn" type="button">Add</button>
+                        </div> 
+                    </form>
+                    <div class="add-task-div">
+                        <button class="add-task-btn">Add New Task</button>
+                    </div> 
+                </div>
+                <div class="discard-div">
+                    <p>Do you want to discard saved changes?</p>
+                    <div class="discard-btn-div">
+                    <button id="cancel-btn" type="button">Cancel</button>
+                    <button id="discard-btn" type="button">Discard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js" rel="script"></script>
+</body>
+</html>

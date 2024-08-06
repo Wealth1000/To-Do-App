@@ -1,0 +1,265 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.header a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn-collections {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.btn-collections button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.total-btn {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.in-progress-btn {
+    background-color: #FFC107;
+    color: #fff;
+}
+
+.completed-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.task-content {
+    padding: 20px;
+}
+
+.previews-container {
+    display: block;
+    padding: 20px;
+}
+
+.task {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.task-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actual-preview p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.a2 {
+    margin-left: 10px;
+}
+
+.task-preview-btns button {
+    margin-right: 10px;
+}
+
+.add-task-div {
+    display: block; /* Ensure this is visible when previews are showing */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.add-task-div.hidden {
+    display: none; /* Hide when form is showing */
+}
+
+.form {
+    display: none; /* Initially hide the form */
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.form-div {
+    margin-bottom: 15px;
+}
+
+.form-div label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-task-info, .description-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.add-form-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.discard-div {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+}
+
+.discard-btn-div {
+    margin-top: 10px;
+}
+
+#discard-btn, #cancel-btn {
+    margin-right: 10px;
+    cursor: pointer;
+}
+/* Existing styles */
+
+.btn-collections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.btn-collections button {
+    background-color: #e0e0e0; /* Light default background color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-collections button.selected {
+    background-color: #b0b0b0; /* Darker background color for selected button */
+}
+
+.test-task {
+    margin-bottom: 10px;
+}
+
+.test-task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Ensure that the class 'selected' is applied to the default button */
+/* Existing styles */
+
+/* Button container styles */
+.btn-collections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Button base styles */
+.btn-collections button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button colors and selected states */
+.total-btn {
+    background-color: #007bff; /* Blue */
+}
+
+.in-progress-btn {
+    background-color: #ffc107; /* Yellow */
+}
+
+.completed-btn {
+    background-color: #28a745; /* Green */
+}
+
+.btn-collections button.selected.total-btn {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.btn-collections button.selected.in-progress-btn {
+    background-color: #e0a800; /* Darker yellow */
+}
+
+.btn-collections button.selected.completed-btn {
+    background-color: #1e7e34; /* Darker green */
+}
+
+.test-task {
+    margin-bottom: 10px;
+}
+
+.test-task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Ensure that the class 'selected' is applied to the default button */
