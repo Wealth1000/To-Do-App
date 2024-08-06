@@ -286,3 +286,116 @@ main {
 }
 
 /* Ensure that the class 'selected' is applied to the default button */
+/* Existing styles */
+
+/* Button container styles */
+.btn-collections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button base styles */
+.btn-collections button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button colors and selected states */
+.total-btn {
+    background-color: #007bff; /* Blue */
+}
+
+.in-progress-btn {
+    background-color: #ffc107; /* Yellow */
+}
+
+.completed-btn {
+    background-color: #28a745; /* Green */
+}
+
+.btn-collections button.selected.total-btn {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.btn-collections button.selected.in-progress-btn {
+    background-color: #e0a800; /* Darker yellow */
+}
+
+.btn-collections button.selected.completed-btn {
+    background-color: #1e7e34; /* Darker green */
+}
+
+.test-task {
+    margin-bottom: 10px;
+}
+
+.test-task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Position the close button */
+.form .btn-div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.form {
+    position: relative; /* Make sure the form is positioned relative for the absolute positioning of the button */
+}
+
+/* Ensure the close button has proper styling */
+.close-btn {
+    background-color: #ff4d4d; /* Example background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .btn-collections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-collections button {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .form .btn-div {
+        top: auto;
+        right: auto;
+        position: static; /* Move the close button out of the absolute positioning */
+        text-align: right;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form .btn-div {
+        position: static; /* Ensure button remains in view on very small screens */
+        margin: 0;
+    }
+
+    .close-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
