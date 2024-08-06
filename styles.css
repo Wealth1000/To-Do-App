@@ -261,5 +261,28 @@ main {
 .test-task input[type="checkbox"] {
     margin-right: 10px;
 }
+/* Existing styles */
+
+/* Position the close button */
+.form .btn-div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.form {
+    position: relative; /* Make sure the form is positioned relative for the absolute positioning of the button */
+}
+
+/* Ensure the close button has proper styling */
+.close-btn {
+    background-color: #ff4d4d; /* Example background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 /* Ensure that the class 'selected' is applied to the default button */
