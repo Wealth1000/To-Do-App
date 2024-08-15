@@ -44,6 +44,7 @@ main {
     border-radius: 50%;
 }
 
+/* Button Collection Styles */
 .btn-collections {
     display: flex;
     justify-content: space-around;
@@ -73,6 +74,31 @@ main {
     color: #fff;
 }
 
+.btn-collections button.selected {
+    font-weight: bold;
+}
+
+.btn-collections button.selected.total-btn {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.btn-collections button.selected.in-progress-btn {
+    background-color: #e0a800; /* Darker yellow */
+}
+
+.btn-collections button.selected.completed-btn {
+    background-color: #1e7e34; /* Darker green */
+}
+
+.btn-collections button:hover {
+    background-color: #ddd;
+}
+
+.btn-collections button:active {
+    background-color: #ccc;
+}
+
+/* Task Content Styles */
 .task-content {
     padding: 20px;
 }
@@ -83,6 +109,8 @@ main {
 }
 
 .task {
+    display: flex;
+    align-items: center;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
@@ -94,6 +122,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .actual-preview p {
@@ -119,17 +148,20 @@ main {
     display: none; /* Hide when form is showing */
 }
 
-.form {
+/* Task Form Styles */
+.task-form {
     display: none; /* Initially hide the form */
-    padding: 20px;
-    border-top: 1px solid #ddd;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.form-div {
+.form-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
 }
 
-.form-div label {
+.form-group label {
     display: block;
     margin-bottom: 5px;
 }
@@ -141,6 +173,11 @@ main {
     border: 1px solid #ddd;
 }
 
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
 .add-form-btn {
     background-color: #4CAF50;
     color: #fff;
@@ -148,6 +185,7 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 48%;
 }
 
 .close-btn {
@@ -157,8 +195,10 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 48%;
 }
 
+/* Discard Div Styles */
 .discard-div {
     position: fixed;
     top: 20%;
@@ -179,87 +219,18 @@ main {
     margin-right: 10px;
     cursor: pointer;
 }
-/* Existing styles */
 
-.btn-collections {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.btn-collections button {
-    background-color: #e0e0e0; /* Light default background color */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-collections button.selected {
-    background-color: #b0b0b0; /* Darker background color for selected button */
-}
-
-.test-task {
-    margin-bottom: 10px;
-}
-
-.test-task input[type="checkbox"] {
+/* Styles for selecting checkboxes */
+.task-preview .select-checkbox,
+.task .main-checkbox {
     margin-right: 10px;
 }
 
-/* Ensure that the class 'selected' is applied to the default button */
-/* Existing styles */
+.task .main-checkbox {
+    margin-left: -30px; /* Adjust position to be outside the boundary but inside its space */
+}
 
-/* Button container styles */
-.btn-collections {
-    display: flex;
-    justify-content: space-around;
+.delete-selected-btn {
+    display: none;
     margin-bottom: 20px;
 }
-
-/* Button base styles */
-.btn-collections button {
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-/* Button colors and selected states */
-.total-btn {
-    background-color: #007bff; /* Blue */
-}
-
-.in-progress-btn {
-    background-color: #ffc107; /* Yellow */
-}
-
-.completed-btn {
-    background-color: #28a745; /* Green */
-}
-
-.btn-collections button.selected.total-btn {
-    background-color: #0056b3; /* Darker blue */
-}
-
-.btn-collections button.selected.in-progress-btn {
-    background-color: #e0a800; /* Darker yellow */
-}
-
-.btn-collections button.selected.completed-btn {
-    background-color: #1e7e34; /* Darker green */
-}
-
-.test-task {
-    margin-bottom: 10px;
-}
-
-.test-task input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-/* Ensure that the class 'selected' is applied to the default button */
