@@ -3,64 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet">
     <title>To Do App</title>
 </head>
 <body>
     <main>
         <div class="container">
-            <div class="header">
-                <a href="">@Wealth</a>
-                <img src="My Father.jpg"id="#profile-img"/>
-            </div>
+            <header class="header">
+                <a href="#" class="logo">@Wealth</a>
+                <img src="My Father.jpg" id="profile-img" alt="Profile Image"/>
+            </header>
             <div class="content">
-                <div class="btn-collections">
-                    <button class="total-btn selected">Total Tasks</button>
-                    <button class="in-progress-btn">In Progress</button>
-                    <button class="completed-btn">Completed</button>
-                </div>
-                <div class="task-content">
+                <nav class="btn-collections">
+                    <button class="btn total-btn selected">Total Tasks</button>
+                    <button class="btn in-progress-btn">In Progress</button>
+                    <button class="btn completed-btn">Completed</button>
+                </nav>
+                <section class="task-content">
                     <div class="previews-container">
-                        
+                        <!-- Task previews will be dynamically inserted here -->
                     </div>
-                    <form class="form">
-                        <div class="btn-div">
-                            <button class="close-btn">X</button>
+                    <button id="delete-selected-btn">Delete Selected</button>
+                    <form class="task-form">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" class="input-task-info" placeholder="Enter title here" required>
                         </div>
-                        <div class="form-div title">
-                            <label>Title</label><br>
-                            <input class="input-task-info" required id="title" placeholder="Enter title here"/>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" class="input-task-info" placeholder="DD/MM/YYYY" required>
                         </div>
-                        <div class="form-div date">
-                            <label>Date</label><br>
-                            <input class="input-task-info" required id="date" placeholder="DD/MM/YYYY"type="date"/>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" class="input-task-info" placeholder="Eg. Accra, Ghana">
                         </div>
-                        <div class="form-div location">
-                            <label>Location:</label><br>
-                            <input class="input-task-info" id="location" placeholder="Eg. Accra,Ghana"/>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" class="description-input" cols="30" rows="5"></textarea>
                         </div>
-                        <div class="form-div description">
-                            <label>Description</label><br>
-                            <textarea class="description-input" id="description" cols="30"rows="5"></textarea>
+                        <div class="form-actions">
+                            <button type="button" id="submit-btn" class="submit-btn">Add</button>
+                            <button type="button" class="close-btn">X</button>
                         </div>
-                        <div class="add-task-form-div">
-                            <button class="add-form-btn" type="button">Add</button>
-                        </div> 
                     </form>
                     <div class="add-task-div">
                         <button class="add-task-btn">Add New Task</button>
-                    </div> 
-                </div>
+                    </div>
+                </section>
                 <div class="discard-div">
                     <p>Do you want to discard saved changes?</p>
                     <div class="discard-btn-div">
-                    <button id="cancel-btn" type="button">Cancel</button>
-                    <button id="discard-btn" type="button">Discard</button>
+                        <button id="cancel-btn" type="button">Cancel</button>
+                        <button id="discard-btn" type="button">Discard</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <script src="script.js" rel="script"></script>
+    <script src="script.js"></script>
 </body>
 </html>
